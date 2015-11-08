@@ -1,14 +1,122 @@
-<h1>{{title}}</h1>
 
-{{ user }}
+<!doctype html>
+<html>
+<head>
+    <title>ArtistsDecoded</title>
 
-<form method='POST' action=''>{% csrf_token %}
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" src="/static/web/css/bootstrap.min.css">
+    <link rel="stylesheet" src="/static/web/css/home.css">
 
-    {{ form.as_p }}
+	<!--  background image changer
+	<script type="text/javascript">
+	$(window).load(function() {
+	var i =0;
+	var images = ['images/homepage/Arianna.jpg','images/homepage/vintagecam.jpg','images/homepage/10505026_413590265448462_3108080538408848321_o.jpg'];
+	var image = $('#slideit');
+	              //Initial Background image setup
+	image.css('background-image', 'url(images/homepage/Arianna.jpg)');
+	              //Change image at regular intervals
+	setInterval(function(){  
+		image.fadeOut(1000, function () {
+			image.css('background-image', 'url(' + images [i++] +')');
+			image.fadeIn(1000);
+			});
+			if(i == images.length)
+			i = 0;
+		}, 5000);  
+		 });
+	</script>
+	-->
+</head>
 
-    <input type='submit' value='Register'>
+<body style="background-image:url(/static/web/img/homepage/arianna.jpg)">
+<!--  background image changer not working  <div id="slideit" style="width:700px;height:391px;"></div>
+	 -->
+	<div class="container">     
+		<!--row 1-->
+		<header class="row">	
+			<div class="col-xs-3">
+				<div id="title">
+				<p><a href="homepagebootstrap.html"><i>ArtistsDecoded</i></a></p>
+				</div>
+			</div>
+			
+			<div class="col-xs-5"></div>
+			
 
-    <!-- <input> type='text'> -->
-    <!-- <input> -->
+		<div id="loginbar">
+			<div class="col-xs-1">
+				<div id="createprofile">
+					<p><a href="registerprofessional.html">Artists</a></p>
+				</div>
 
-</form>
+			</div>
+
+			<div class="col-xs-1">
+				<div id="signup">
+					<p><a href="registeruser.html">Customers</a></p>
+				</div>
+			</div>	
+
+			<div class="col-xs-1">
+				<div id="help">
+					<p><a href="homepagebootstrap.html">Help</a></p>
+				</div>
+			</div>
+
+			<div class="col-xs-1">
+				<div id="login">
+					<p><a href="login.html">Log In</a></p>
+				</div>
+			</div>
+		</div>
+		
+		</header><!--top bar-->
+
+		<!--row 2-->
+		<div class="row">
+			<div class="col-md-12 center-block">
+			<div class="welcome_text_div center-block">
+				<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+			<div class="how_it_works_box text-center">
+				<a href="#" id="how_it_works">
+					How It Works
+				</a>
+			</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="row">
+	
+		<div class="col-md-12 center-block">
+			<div class="searchbardiv text-center">
+			<form action="">
+			<br></br><br></br><br></br><br></br>
+			<select class="selectprofession">
+			<option>What Are You Looking For?</option>
+			<option>Hair Stylist</option>
+			<option>Henna Artist</option>
+			<option>Make-up Artist</option>
+			<option>Photographer</option>
+			<option>Videographer</option>
+			</select>
+			
+			<input id="locationbox" type="text" placeholder="Where?"/>
+			<input class="datebox" type="date" name="Date From?"/>
+			<input class="datebox" type="date" name="Date To?"/>
+			<input id="search" type="submit" value="Search" />
+
+			</form>
+		</div>
+		</div>
+		</div>
+	</div><!--container-->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/web/js/bootstrap.min.js"></script>
+</body>
+</html>
