@@ -3,10 +3,17 @@ body {
 		margin:0;
 		font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
 		color: black;
+		background-size: auto 700px;
+		background-repeat: no-repeat;
+		background-position: top center;
 	}
 
 .container {
 	margin-bottom: 50px;
+}
+
+header {
+    padding-top: 10px;
 }
 
 #loginbar {
@@ -29,6 +36,15 @@ a:hover {
 
 #title {
 	font-size: 2em;
+}
+
+.forartists:link {
+    border: 1px solid white;
+    padding: 2px;
+}
+
+#login {
+    padding-right: 10px;
 }
 
 .welcome_text_div {

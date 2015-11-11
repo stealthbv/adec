@@ -19,4 +19,9 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^$', 'src.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^home$', 'src.views.home', name='home'),
+    url(r'^registerprofessional$', 'src.views.register_professional', name='register_professional'),
+    url(r'^registeruser$', 'src.views.register_user', name='register_user'),
+    url(r'^termsandconditions$', 'src.views.terms_and_conditions', name='terms_and_conditions'),
+    url(r'^howitworks$', 'src.views.how_it_works', name='how_it_works'),
 ]
