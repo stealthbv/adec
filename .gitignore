@@ -61,5 +61,3 @@ target/
 
 public/
 venv/
-staticfiles/
-mediafiles/
