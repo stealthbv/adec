@@ -1,15 +1,12 @@
 from django.contrib import admin
-# Register your models here.
 
-from .forms import RegisterForm
-from .models import Register
-
-
-class RegisterAdmin(admin.ModelAdmin):
-    list_display = ["__unicode__", "timestamp", "updated"]
-    form = RegisterForm
-# class Meta:
-#	model = Register
+from .forms import ProfessionalForm
+from .models import Professional
 
 
-admin.site.register(Register, RegisterAdmin)
+class ProfessionalAdmin(admin.ModelAdmin):
+    list_display = ["profession", "created", "modified"]
+    form = ProfessionalForm
+
+
+admin.site.register(Professional, ProfessionalAdmin)

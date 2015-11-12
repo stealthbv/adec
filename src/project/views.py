@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
-from adec.forms import RegisterForm
+from adec.forms import ProfessionalForm
 
 
 # Create your views here.
 def home(request):
     title = 'Welcome'
-    form = RegisterForm(request.POST or None)
+    form = ProfessionalForm(request.POST or None)
     context = {
         "title": title,
         "form": form
@@ -20,8 +20,7 @@ def home(request):
         if not first_name:
             first_name = "New first name"
         instance.first_name = first_name
-        # if not instance.full_name:
-        #	instance.full_name = "Justin"
+
         instance.save()
         context = {
             "title": "Thank you"
