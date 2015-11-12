@@ -10,10 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
+# Build paths inside the project like this: location('path')
+from os.path import dirname, abspath, join
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
+
+location = lambda arg: abspath(join(BASE_DIR, arg))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -24,18 +26,26 @@ SECRET_KEY = '(@&+#0ig^t!v_-#h!*m7=e#_!vwt=5pr+qy!*ahwb8#@@#cqo_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+SITE_ID = 1
+
+ALLOWED_HOSTS = ['*']
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
 INSTALLED_APPS = (
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'src',
+
+    'debug_toolbar',
+
+    'adec',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,12 +59,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'src.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [location('project/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,22 +78,21 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'src.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'adec',
-        'USER': 'vai',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+    "default": dj_database_url.config(default='postgres:///adec_master'),
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': '12edsq2e2',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -101,11 +110,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+
+MEDIA_ROOT = location('../public/media')
+MEDIA_URL = '/medai/'
+
+STATIC_ROOT = location('../public/static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    location('project/static'),
 )

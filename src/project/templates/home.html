@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+{% load static from staticfiles %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<style>
+body {
+	background-image:url('{% static 'img/Homepage/Arianna.jpg' %}');
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<!--row 1-->
+	<header class="row">
+		<div class="col-xs-3">
+			<div id="title">
+				<p>
+					<a href="{% url 'home' %}"><em><span style="color=#465C63">Artists</span> Decoded</em></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="col-xs-6"></div>
+
+		<div id="loginbar">
+			<div class="col-xs-1">
+				<div id="createprofile">
+					<p>
+						<a href="/registerprofessional" class="forartists">Artists</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-xs-1">
+				<div id="signup">
+					<p>
+						<a href="/registeruser">Customers</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-1">
+				<div id="login">
+					<p>
+						<a href="/templates/login.html">Log In</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--row 2-->
+	<div class="row">
+		<div class="col-md-12 center-block">
+			<div class="welcome_text_div center-block"></div>
+			<div class="how_it_works_box text-center">
+				<a href="{% url 'how_it_works' %}" id="how_it_works">How It Works</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- end container -->
+{% endblock %}
