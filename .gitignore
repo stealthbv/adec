@@ -58,3 +58,8 @@ target/
 
 # Intellij files
 .idea/*
+
+public/
+venv/
+staticfiles/
+mediafiles/
