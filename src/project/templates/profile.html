@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/lightbox.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">  
-  <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
-  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">  
+  <link rel="stylesheet" href="{% static 'css/vendor/jasny-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 </head>
 <body>
 
@@ -424,9 +424,9 @@
   </div><!--container-->  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jasny-bootstrap.min.js"></script>
-  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jasny-bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
 
 </body>
 </html>
