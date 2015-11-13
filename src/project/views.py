@@ -1,32 +1,10 @@
 from django.shortcuts import render
 
-from adec.forms import ProfessionalForm
-
 
 # Create your views here.
 def home(request):
-    title = 'Welcome'
-    form = ProfessionalForm(request.POST or None)
-    context = {
-        "title": title,
-        "form": form
-    }
+    return render(request, "home.html")
 
-    if form.is_valid():
-        # form.save()
-        instance = form.save(commit=False)
-
-        first_name = form.cleaned_data.get("first_name")
-        if not first_name:
-            first_name = "New first name"
-        instance.first_name = first_name
-
-        instance.save()
-        context = {
-            "title": "Thank you"
-        }
-
-    return render(request, "home.html", context)
 
 def register_professional(request):
     return render(request, "registerprofessional.html")

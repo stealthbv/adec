@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 
 <!doctype html>
 <html>
@@ -8,8 +9,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--bootstrap-->
-    <link rel="stylesheet" href="/static/web/css/vendor/bootstrap.min.css">
-	<link rel="stylesheet" href="/static/web/css/registertemp.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/registertemp.css' %}">
+
 
 	
 </head>
@@ -36,7 +38,7 @@
 		<div class="form">
 		
 		
-		<h4><img class="registerimage" src="/static/web/img/Registertemp/registertemp.jpg" alt="register" height="35px"></img><strong>Register Your Services</strong></h4>
+		<h4><img class="registerimage" src="/static/img/Registertemp/registertemp.jpg" alt="register" height="35px"><strong>Register Your Services</strong></h4>
 		<p>Be the first to know when we launch this site!<p>
 		
 
@@ -107,8 +109,8 @@
 	
 	</div><!--container-->
 
-<script src="/static/web/jquery/jquery.js"></script>
-<script src="/static/web/js/bootstrap.min.js"></script>
+<script src="{% static 'jquery/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 
 

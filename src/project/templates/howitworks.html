@@ -2,12 +2,8 @@
 {% load static from staticfiles %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-<style>
-body {
-	background-image:url('{% static 'img/Homepage/Arianna.jpg' %}');
-}
-</style>
+<link rel="stylesheet" href="{% static 'css/howitworks.css' %}">
+
 {% endblock %}
 
 {% block content %}
@@ -51,6 +47,8 @@ body {
 		</div>
 	</header>
 
-<img src="'{% static 'img/Homepage/howitworks.png' %}'" alt="How It Works" width="80%">
+<img class="howitworksimage" src="/static/img/Homepage/howitworks.png" alt="How It Works" width="100%">
 
 </div>
+
+{% endblock %}

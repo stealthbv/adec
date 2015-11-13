@@ -21,16 +21,13 @@ header {
 	font-weight: bold;
 }
 
-#title span {
-    color: #2A3138;
-    }
 
 a:link {
-	color: white;
+	color: black;
 }
 
 a:visited {
-	color: white;
+	color: black;
 }
 
 a:hover {
@@ -41,9 +38,11 @@ a:hover {
 	font-size: 2em;
 }
 
-.forartists {
-    margin-left: 12px;
+.forartists:link {
+    border: 1px solid black;
+    padding: 2px;
 }
+
 #login {
     padding-right: 10px;
 }
@@ -75,7 +74,7 @@ a:hover {
 	text-decoration: none;
 	padding: 10px 30px 10px 30px;
 	border-radius: 2px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #how_it_works:visited {
@@ -84,6 +83,12 @@ a:hover {
 
 #how_it_works:hover {
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.howitworks {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .searchbardiv {
