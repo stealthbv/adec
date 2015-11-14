@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: location('path')
+# Build paths inside the adec like this: location('path')
 from os.path import dirname, abspath, join
 
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
@@ -42,10 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'debug_toolbar',
-
-    'adec',
+    'project',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -59,12 +57,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'adec.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [location('project/templates')],
+        'DIRS': [location('adec/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'adec.wsgi.application'
 
 
 # Database
@@ -86,7 +84,7 @@ import dj_database_url
 
 
 DATABASES = {
-    "default": dj_database_url.config(default='postgres:///adec'),
+    "default": dj_database_url.config(default='postgres:///project'),
 }
 
 CACHES = {
@@ -120,5 +118,5 @@ STATIC_ROOT = location('../public/static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    location('project/static'),
+    location('adec/static'),
 )

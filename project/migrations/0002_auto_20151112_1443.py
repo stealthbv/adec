@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('adec', '0001_initial'),
+        ('project', '0001_initial'),
     ]
 
     operations = [

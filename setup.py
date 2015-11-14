@@ -6,11 +6,11 @@ install_requires = [str(line.req) for line in parse_requirements(filename='requi
 
 
 setup(
-    name='adec-app',
+    name='project-app',
     version='1.0.0',
     author='',
     author_email='',
-    url='https://github.com/stealthbv/adec',
+    url='https://github.com/stealthbv/project',
     package_dir={'': 'src'},
     packages=find_packages('src'),
     install_requires=install_requires,
