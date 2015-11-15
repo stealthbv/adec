@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 
-from .views import *
+from adec.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^how-it-works/$', how_it_works, name='how_it_works'),
     url(r'^$', home, name='home'),
     url(r'^registerprofessional/$', register_professional, name='register_professional'),
+    url(r'^thanks/$', thanks, name='thanks'),
     url(r'^registeruser/$', register_user, name='register_user'),
 ]
 
