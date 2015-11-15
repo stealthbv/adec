@@ -80,11 +80,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+
 # Database
 import dj_database_url
 
+
 DATABASES = {
-    "default": dj_database_url.config(default='postgres:///adec_master'),
+    "default": dj_database_url.config(default='postgres:///adec'),
 }
 
 CACHES = {

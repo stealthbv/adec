@@ -1,5 +1,5 @@
 body {
-		
+
 		margin:0;
 		font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
 		color: black;
@@ -21,6 +21,9 @@ header {
 	font-weight: bold;
 }
 
+#title span {
+    color: #2A3138;
+    }
 
 a:link {
 	color: white;
@@ -38,11 +41,9 @@ a:hover {
 	font-size: 2em;
 }
 
-.forartists:link {
-    border: 1px solid white;
-    padding: 2px;
+.forartists {
+    margin-left: 12px;
 }
-
 #login {
     padding-right: 10px;
 }

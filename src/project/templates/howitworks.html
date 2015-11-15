@@ -1,6 +1,54 @@
 {% extends 'layouts/base.html' %}
 {% load static from staticfiles %}
 
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/howitworks.css' %}">
+
+{% endblock %}
+
 {% block content %}
-<h1>How it works?</h1>
+<div class="container">
+	<!--row 1-->
+	<header class="row">
+		<div class="col-xs-3">
+			<div id="title">
+				<p>
+					<a href="{% url 'home' %}"><em><span style="color=#465C63">Artists</span> Decoded</em></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="col-xs-6"></div>
+
+		<div id="loginbar">
+			<div class="col-xs-1">
+				<div id="createprofile">
+					<p>
+						<a href="/registerprofessional" class="forartists">Artists</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-xs-1">
+				<div id="signup">
+					<p>
+						<a href="/registeruser">Customers</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-lg-1">
+				<div id="login">
+					<p>
+						<a href="/login">Log In</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<img class="howitworksimage" src="/static/img/Homepage/howitworks.png" alt="How It Works" width="100%">
+
+</div>
+
 {% endblock %}

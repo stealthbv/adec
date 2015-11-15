@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 
 <!doctype html>
 <html>
@@ -8,8 +9,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--bootstrap-->
-    <link rel="stylesheet" href="/static/web/css/vendor/bootstrap.min.css">
-	<link rel="stylesheet" href="/static/web/css/registertemp.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/registertemp.css' %}">
+
 
 	
 </head>
@@ -36,11 +38,11 @@
 		<div class="form">
 		
 		
-		<h4><img class="registerimage" src="/static/web/img/Registertemp/registertemp.jpg" alt="register" height="35px"></img><strong>Register Your Services</strong></h4>
+		<h4><img class="registerimage" src="/static/img/Registertemp/registertemp.jpg" alt="register" height="35px"><strong>Register Your Services</strong></h4>
 		<p>Be the first to know when we launch this site!<p>
 		
 
-		<form role="form">
+		<form role="form" action="">
 
 			<div class="form-group">
 			<Select name="Profession" multiple>
@@ -55,12 +57,12 @@
 
 			<div class="form-group">
     		<label class="sr-only" for="firstname">First name:</label>
-    		<input type="name" class="form-control" id="fname" placeholder="First name">
+    		<input type="text" class="form-control" id="fname" placeholder="First name">
   			</div>
 
   			<div class="form-group">
     		<label class="sr-only" for="surname">Surname:</label>
-    		<input type="name" class="form-control" id="sname" placeholder="Surname">
+    		<input type="text" class="form-control" id="sname" placeholder="Surname">
   			</div>
 
   			<div class="form-group">
@@ -107,8 +109,8 @@
 	
 	</div><!--container-->
 
-<script src="/static/web/jquery/jquery.js"></script>
-<script src="/static/web/js/bootstrap.min.js"></script>
+<script src="{% static 'jquery/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 
 
