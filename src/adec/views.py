@@ -5,6 +5,7 @@ from django.shortcuts import render
 # Create your views here.
 from adec.forms import ProfessionalForm
 
+from models import *
 
 def home(request):
     return render(request, "home.html")
@@ -32,6 +33,20 @@ def register_professional(request):
 
 
 def register_user(request):
+    #if request.POST.get('first_name'):
+    #    print request.POST.get('city')
+    #    form = Professional(professional=request.POST.get('professional'),
+    #                        first_name=request.POST.get('first_name'),
+    #                        last_name=request.POST.get('last_name'),
+    #                        email=request.POST.get('email'),
+    #                        phone_number=request.POST.get('phone_number'),
+    #                        country=request.POST.get('country'),
+    #                        city=request.POST.get('city'),
+    #                        instagram = request.POST.get('instagram'),
+    #                        facebook = request.POST.get('facebook'),
+    #                        twitter = request.POST.get('twitter'),
+    #                        )
+    #    form.save()
     return render(request, "registeruser.html")
 
 
@@ -45,3 +60,11 @@ def how_it_works(request):
 
 def thanks(request):
     return render(request, "thanks.html")
+
+
+def search_results(request):
+    return render(request, "searchresults.html")
+
+
+def profile(request):
+    return render(request, "profile.html")

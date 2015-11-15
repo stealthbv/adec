@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,6 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
   <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">  
@@ -19,7 +20,7 @@
   <header class="row">  
       <div class="col-xs-3">
         <div id="title">
-        <p><a href="homepagebootstrap.html"><i>ArtistsDecoded</i></a></p>
+        <p><a href="{% url 'home' %}"><i>ArtistsDecoded</i></a></p>
         </div>
       </div>
       
@@ -29,14 +30,14 @@
     <div id="loginbar">
       <div class="col-xs-1">
         <div id="createprofile">
-          <p><a href="registerprofessional.html" class="forartists">Artists</a></p>
+          <p><a href="/registerprofessional" class="forartists">Artists</a></p>
         </div>
 
       </div>
 
       <div class="col-xs-1">
         <div id="signup">
-          <p><a href="registeruser.html">Clients</a></p>
+          <p><a href="/registeruser">Clients</a></p>
         </div>
       </div>  
 
@@ -50,7 +51,7 @@
 
       <div class="col-xs-1">
         <div id="login">
-          <p><a href="login.html">Log In</a></p>
+          <p><a href="/login">Log In</a></p>
         </div>
       </div>
     </div>
@@ -66,11 +67,11 @@
   <div class="row">
 
     <hr class="topbar">
-    
+
     <div class="col-xs-3">
-      <img src="Images/Profile/Miniprofile/IMG_0408.jpg" class="img-responsive center-block" height="300px"></img>
+      <img src="{% static 'img/Profile/Miniprofile/IMG_0408.jpg' %}" class="img-responsive center-block" height="300px">
     </div><!--miniprofile-->
-    
+
 
     <div class="col-xs-3 display:inline">
       <h3 class="toptext"><strong>Milan Dhanjee</strong></h3>
@@ -86,7 +87,7 @@
 
     <div class="col-xs-3 minisummary">
       <h3 class="toptext"><strong>About Me</strong></h3>
-      <p>I am an experienced photographer based in London.  I cater for all styles of photography... dfgoi dfohfdoi fdofd ofdi dfoihfdoih df odfih fi fi fhfiodfh offdo</p>
+      <p>I am an experienced photographer based in London.  I cater for all styles of photography... </p>
       <a class="btn btn-primary btn-sm" href="registerprofessional.html">Contact Artist</a>
     </div>
 
@@ -142,12 +143,10 @@
     <div class="col-xs-9">
       
     </div>
-
     <div class="col-xs-3">
       
       <a class="btn btn-primary btn-lg" href="registerprofessional.html">Request to Book</a>
     </div>
-
   </div><!--bookingsummary-->
 
   <div class="tab-content">
@@ -163,18 +162,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0121.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0121.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0121.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0121.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0167.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0167.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0167.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0167.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0177.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0177.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0177.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0177.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -184,18 +183,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0248.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0248.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0248.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0248.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0253.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0253.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0253.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0253.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0309.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0309.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0724.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0724.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -205,18 +204,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0724.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0724.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_0954.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0954.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_0954.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_0954.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_1022.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_1022.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/final/IMG_1022.jpg" data-lightbox="holiday"><img src="Images/Profile/Pictures/final/IMG_1022.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/final/IMG_1068.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_1068.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -227,7 +226,7 @@
   </div><!--pictures-->
   </div><!--images-->
 
-  <div id="unedited" class="tab-pane fade in active">
+  <div id="unedited" class="tab-pane fade in">
   <div class="pictures">
     <h2>Unedited Images</h2>
 
@@ -237,18 +236,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0055.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0055.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0055.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0055.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0336.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0336.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0336.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0336.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0411.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0411.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0411.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0411.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -258,18 +257,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0445.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0445.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0445.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0445.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0551.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0551.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0551.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0551.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0659.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0659.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0659.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0659.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -279,18 +278,18 @@
     <div class="row">
       
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0826.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0826.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0826.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0826.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_0940.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_0940.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_0940.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0940.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
 
       <div class="col-md-4 col-xs-4">
-        <a href="Images/Profile/Pictures/unedited/IMG_1401.jpg" data-lightbox="natural"><img src="Images/Profile/Pictures/unedited/IMG_1401.jpg" width="400px" class="img-thumbnail"/></a>
+        <a href="{% static 'img/Profile/unedited/IMG_1401.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_1401.jpg' %}" width="400px" class="img-thumbnail"/></a>
 
       </div>
       
@@ -304,7 +303,7 @@
   </div><!--images-->
 
 
-  <div id="bookings" class="tab-pane fade in active">
+  <div id="bookings" class="tab-pane fade in">
   <div class="row">
     <div class="col-md-3 text-left">
       <h3>Book an Appointment</h3>

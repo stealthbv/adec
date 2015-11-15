@@ -15,6 +15,8 @@ urlpatterns = [
     url(r'^registerprofessional/$', register_professional, name='register_professional'),
     url(r'^thanks/$', thanks, name='thanks'),
     url(r'^registeruser/$', register_user, name='register_user'),
+    url(r'^searchresults/$', search_results, name='search_results'),
+    url(r'^profile/$', profile, name='profile'),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,124 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ArtistsDecoded</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">  
+  <link rel="stylesheet" href="{% static 'css/vendor/jasny-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/searchresults.css' %}">
+</head>
+<body>
+
+
+
+  <header class="row">
+      <div class="col-xs-3">
+        <div id="title">
+        <p><a href="{% url 'home' %}"><i>ArtistsDecoded</i></a></p>
+        </div>
+      </div>
+
+      <div class="col-xs-6"></div>
+
+
+    <div id="loginbar">
+      <div class="col-xs-1">
+        <div id="createprofile">
+          <p><a href="/registerprofessional" class="forartists">Artists</a></p>
+        </div>
+
+      </div>
+
+      <div class="col-xs-1">
+        <div id="signup">
+          <p><a href="/registeruser">Clients</a></p>
+        </div>
+      </div>
+
+
+      <div class="col-xs-1">
+        <div id="login">
+          <p><a href="/login">Log In</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    </header><!--top bar-->
+
+
+
+<div class="container">
+
+    <hgroup class="mb20">
+		<h1>Search Results</h1>
+		<h2 class="lead"><strong class="text-danger">1</strong> result(s) found</h2>
+	</hgroup>
+
+    <section class="col-xs-12 col-sm-6 col-md-12">
+		<article class="search-result row">
+			<div class="col-xs-12 col-sm-12 col-md-3">
+				<a href="#" title="Display Image" class="thumbnail"><img src="{% static 'img/Profile/Miniprofile/IMG_0408.jpg' %}" alt="Profile Image" height="200"/></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul class="meta-search">
+                    <h3><a href="/profile" title="">Milan Dhanjee</a></h3>
+					<li><i class="glyphicon glyphicon-calendar"></i> <span>12/15/2015 - 12/17/2015</span></li>
+					<li><i class="glyphicon glyphicon-time"></i> <span>2-3 hr</span></li>
+					<li><i class="glyphicon glyphicon-tags"></i> <span>£135</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+
+                <div class="carousel slide" id="myCarousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0121.jpg' %}" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0157.jpg' %}" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0177.jpg' %}" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0248.jpg' %}" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0253.jpg' %}" class="img-responsive"></a></div>
+    </div>
+    <div class="item">
+      <div class="col-md-4"><a href="/profile"><img src="{% static 'img/Profile/final/IMG_0309.jpg' %}" class="img-responsive"></a></div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+</div>
+
+
+            <br>
+				<p>I am an experienced photographer based in London.  I cater for all styles of photography...</p>
+
+			</div>
+			<span class="clearfix borda"></span>
+		</article>
+
+	</section>
+</div>
+
+
+
+
+
+
+<script> src="{% static 'js/searchresults.js' %}"></script>
+
+
+</body>
+</html>
