@@ -1,4 +1,6 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
+from django.utils.decorators import method_decorator
 from django.views import generic
 
 from adec.apps.booking.forms import BookingForm
@@ -31,8 +33,10 @@ class CreateAppointment(generic.CreateView):
         kwargs = super(CreateAppointment, self).get_form_kwargs()
         kwargs['professional'] = self.professional
         kwargs['service'] = self.service
+        kwargs['user'] = self.request.user
         return kwargs
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.professional = get_object_or_404(Professional, slug=self.kwargs['slug'])
         self.service = get_object_or_404(Service, id=self.request.GET.get('service'))
