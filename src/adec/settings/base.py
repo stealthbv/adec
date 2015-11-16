@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'storages',
     'adec.apps.booking',
 )
 
@@ -78,10 +79,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'adec.wsgi.application'
 
-
 # Database
 import dj_database_url
-
 
 DATABASES = {
     "default": dj_database_url.config(default='postgres:///adec_master'),
