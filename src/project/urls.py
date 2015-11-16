@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^registeruser/$', register_user, name='register_user'),
     url(r'^searchresults/$', search_results, name='search_results'),
     url(r'^profile/$', profile, name='profile'),
+    url(r'^editprofile/$', edit_profile, name='edit_profile'),
+    url(r'^login/$', login, name='login'),
 ]
 
 if settings.DEBUG:

@@ -4,7 +4,7 @@ body {
 		font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
 		color: black;
 		background-size: auto 700px;
-		background-repeat: no-repeat;
+		background-repeat:no-repeat;
 		background-position: top center;
 	}
 
@@ -13,17 +13,18 @@ body {
 }
 
 header {
-    padding-top: 10px;
+	padding-top: 10px;
+}
+
+#login {
+	margin-right: 10px;
 }
 
 #loginbar {
-	font-size: 1em;
+	font-size: 1.15em;
 	font-weight: bold;
 }
 
-#title span {
-    color: #2A3138;
-    }
 
 a:link {
 	color: white;
@@ -41,11 +42,13 @@ a:hover {
 	font-size: 2em;
 }
 
-.forartists {
-    margin-left: 12px;
+#title span {
+	color: #2A3138;
 }
-#login {
-    padding-right: 10px;
+
+.forartists:link {
+	padding: 2px;
+	margin-left: 12px;
 }
 
 .welcome_text_div {
@@ -67,7 +70,7 @@ a:hover {
 #how_it_works {
 	position: relative;
 	font-weight: bold;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 #how_it_works:link {
@@ -94,20 +97,64 @@ a:hover {
 .selectprofession {
 	height: 26px;
 	margin-right: -4px;
+	-webkit-appearance:none; /* remove the strong OSX influence from Webkit */
 }
 
 #locationbox {
 	margin-right: -4px;
+	-webkit-appearance:none; /* remove the strong OSX influence from Webkit */
 }
 
 .datebox {
 	margin-right: -4px;
+	-webkit-appearance:none; /* remove the strong OSX influence from Webkit */
 }
 
-.body {
-    background-repeat:no-repeat;
-    background-size: auto 700px;
-    margin:0;
-    font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
-    background-position: center;
+.selectduration {
+	height: 26px;
+	margin-right: -4px;
+	-webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+}
+
+#search {
+	-moz-box-shadow:inset 0px 1px 0px 0px #313940;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #313940;
+	box-shadow:inset 0px 1px 0px 0px #313940;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #24292b), color-stop(1, #32393d));
+	background:-moz-linear-gradient(top, #24292b 5%, #32393d 100%);
+	background:-webkit-linear-gradient(top, #24292b 5%, #32393d 100%);
+	background:-o-linear-gradient(top, #24292b 5%, #32393d 100%);
+	background:-ms-linear-gradient(top, #24292b 5%, #32393d 100%);
+	background:linear-gradient(to bottom, #24292b 5%, #32393d 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#24292b', endColorstr='#32393d',GradientType=0);
+	background-color:#24292b;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #293238;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:3px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #323840;
+	-webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+}
+
+#search:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #32393d), color-stop(1, #24292b));
+	background:-moz-linear-gradient(top, #32393d 5%, #24292b 100%);
+	background:-webkit-linear-gradient(top, #32393d 5%, #24292b 100%);
+	background:-o-linear-gradient(top, #32393d 5%, #24292b 100%);
+	background:-ms-linear-gradient(top, #32393d 5%, #24292b 100%);
+	background:linear-gradient(to bottom, #32393d 5%, #24292b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#32393d', endColorstr='#24292b',GradientType=0);
+	background-color:#32393d;
+}
+
+#search:active {
+	position:relative;
+	top:1px;
 }

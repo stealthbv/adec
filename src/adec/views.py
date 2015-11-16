@@ -68,3 +68,11 @@ def search_results(request):
 
 def profile(request):
     return render(request, "profile.html")
+
+def edit_profile(request):
+    return render(request, "editprofile.html")
+
+
+def login(request):
+    return render(request, "login.html")
+

@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +8,10 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/lightbox.css">
-  <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/editprofile.css">
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jasny-bootstrap.min.js"></script>
-  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/jasny-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'css/editprofile.css' %}">
 
 
 
@@ -27,21 +21,35 @@
 <body>
 
 
-  
 <div class="navbar navbar-default row">
-    <div class="container-fluid">
-      
-    </div>
-    <ul class="topbar nav navbar-nav">
-      <li><a href="homepagebootstrap.html"><i>ArtistsDecoded</i></a></li>
-    </ul>
+
+		<div class="col-xs-3">
+			<div id="title">
+				<p>
+					<a href="{% url 'home' %}" class="toplink"><em>ArtistsDecoded</em></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="col-xs-6"></div>
+
+
+
+
+			<div class="col-lg-3">
+				<div id="profile">
+					<p>
+						<a href="/profile" class="toplink">Profile</a>
+					</p>
+				</div>
+			</div>
+		</div>
   </div>  
 
 
 
+  <div class="container">
 
-
-<div class="container">
 
   <h1>Edit Profile</h1>
     <hr>
@@ -49,7 +57,7 @@
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img src="http://placehold.it/100" class="avatar img-circle" alt="avatar">
+          <img src="{% static 'img/Profile/Miniprofile/IMG_0408.jpg' %}" width="100" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo</h6>
           
           <input type="file" class="form-control">
@@ -80,32 +88,32 @@
 
 
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
-    <li><a data-toggle="tab" href="#personal">Personal</a></li>
-    <li><a data-toggle="tab" href="#general">General</a></li>
+    <li class="active"><a data-toggle="tab" href="#profiletab" class="tabs">Profile</a></li>
+    <li><a data-toggle="tab" href="#personal" class="tabs">Personal</a></li>
+    <li><a data-toggle="tab" href="#general" class="tabs">General</a></li>
   </ul>
 
   <div class="tab-content">
-    <div id="profile" class="tab-pane fade in active">
+    <div id="profiletab" class="tab-pane fade in active">
       <h3>Profile Information</h3>
         
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="Jane">
+              <input class="form-control" type="text" value="Milan">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="Bishop">
+              <input class="form-control" type="text" value="Dhanjee">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Company:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="Artists Decoded">
             </div>
           </div>
           <div class="form-group">
@@ -131,13 +139,13 @@
           <div class="form-group">
             <label class="col-md-3 control-label">Username:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="janeuser">
+              <input class="form-control" type="text" value="user">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="11111122333">
+              <input class="form-control" type="password" value="11122333">
             </div>
           </div>
           <div class="form-group">
@@ -470,7 +478,7 @@
     <div id="general" class="tab-pane fade">
       <h3>General</h3>
         
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" method="post">
           <div class="form-group">
             <label class="col-lg-3 control-label">Travel Radius</label>
             <div class="col-lg-8">
@@ -490,10 +498,10 @@
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
-              <input type="submit" class="btn btn-primary" value="Save Changes" onclick="window.location.href='profile.html'">
+              <input type="submit" class="btn btn-primary" value="Save Changes">
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">
-              <input type="submit" class="btn btn-default" value="Continue">
+              <input type="submit" class="btn btn-default" value="Continue" onSubmit="window.location.href='/profile'">
             </div>
           </div>
         </form>
@@ -503,6 +511,12 @@
       </div>
     </div>
 </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jasny-bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
 
 </body>
 </html>
