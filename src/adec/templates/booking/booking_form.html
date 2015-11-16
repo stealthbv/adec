@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Book your appointment
+      </div>
+      <div class="panel-body">
+        <form action="" method="post">
+
+          {% csrf_token %}
+          {% for field in form %}
+            {% include "partials/form_field.html" %}
+          {% endfor %}
+
+          <button type="submit" class="btn btn-primary">Book</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

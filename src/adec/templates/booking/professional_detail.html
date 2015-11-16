@@ -28,16 +28,24 @@
             <tr>
               <th colspan="4">{{ category.grouper.name }}</th>
             </tr>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+              <th>Time</th>
+              <th></th>
+            </tr>
             {% for service in category.list %}
+
               <tr>
                 <td>
-                  <h3>{{ service.name }}</h3>
+                  <h4>{{ service.name }}</h4>
 
                   <p>{{ service.description }}</p>
                 </td>
                 <td>{{ service.price }}</td>
                 <td>{{ service.minutes }}</td>
-                <td><a href="{% url 'create_appointment' professional.slug %}?service={{ service.id }}" class="btn btn-primary btn-sm">Book</a></td>
+                <td><a href="{% url 'create_appointment' professional.slug %}?service={{ service.id }}"
+                       class="btn btn-primary btn-sm">Book</a></td>
               </tr>
             {% endfor %}
           {% endfor %}
