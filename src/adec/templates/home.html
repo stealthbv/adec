@@ -61,6 +61,42 @@
       </div>
     </div>
 
+  <div class="row">
+
+		<div class="col-md-12 center-block">
+			<div class="searchbardiv text-center">
+				<form action="{% url 'search_results' %}" method="post">
+					{% csrf_token %}
+
+					<select class="selectprofession">
+						<option>What Are You Looking For?</option>
+						<option>Hair Stylist</option>
+						<option>Henna Artist</option>
+						<option>Make-up Artist</option>
+						<option>Photographer</option>
+						<option>Videographer</option>
+					</select>
+
+					<input id="locationbox" type="text" placeholder="Where?"/>
+					<input class="datebox" type="date" name="Date From?"/>
+					<input class="datebox" type="date" name="Date To?"/>
+
+					<select class="selectduration">
+					<option>Duration</option>
+					<option>0-1 hr</option>
+					<option>1-2 hr</option>
+					<option>2-3 hr</option>
+					<option>Half day</option>
+					<option>Full day</option>
+					</select>
+
+					<input id="search" type="submit" value="Search" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+
   </div>
   <!-- end container -->
 {% endblock %}

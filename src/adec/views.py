@@ -20,3 +20,23 @@ def terms_and_conditions(request):
 
 def how_it_works(request):
     return render(request, "howitworks.html")
+
+
+def thanks(request):
+    return render(request, "thanks.html")
+
+
+def search_results(request):
+    return render(request, "searchresults.html")
+
+
+def profile(request):
+    return render(request, "profile.html")
+
+
+def edit_profile(request):
+    return render(request, "editprofile.html")
+
+
+def login(request):
+    return render(request, "login.html")

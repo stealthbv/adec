@@ -1,0 +1,430 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ArtistsDecoded</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/vendor/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor/jasny-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+
+
+  <header class="row">
+      <div class="col-xs-3">
+        <div id="title">
+        <p><a href="{% url 'home' %}"><i>ArtistsDecoded</i></a></p>
+        </div>
+      </div>
+
+      <div class="col-xs-6"></div>
+
+
+    <div id="loginbar">
+      <div class="col-xs-1">
+        <div id="createprofile">
+          <p><a href="/registerprofessional" class="forartists">Artists</a></p>
+        </div>
+
+      </div>
+
+      <div class="col-xs-1">
+        <div id="signup">
+          <p><a href="/registeruser">Clients</a></p>
+        </div>
+      </div>
+
+<!--
+      <div class="col-xs-1">
+        <div id="help">
+          <p><a href="homepagebootstrap.html">Help</a></p>
+        </div>
+      </div>
+    -->
+
+      <div class="col-xs-1">
+        <div id="login">
+          <p><a href="/login">Log In</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    </header><!--top bar-->
+
+
+
+
+  <div class="profilesummary">
+
+  <div class="row">
+
+    <hr class="topbar">
+
+    <div class="col-xs-3">
+      <img src="{% static 'img/Profile/Miniprofile/IMG_0408.jpg' %}" class="img-responsive center-block" height="300px">
+    </div><!--miniprofile-->
+
+
+    <div class="col-xs-3 display:inline">
+      <h3 class="toptext"><strong>Milan Dhanjee</strong></h3>
+      <h3 class="textsummary">ArtistsDecoded</h3>
+      <h3 class="textsummary">London, UK</h3>
+      <h4 class="textsummary">Photographer</h4>
+    </div>
+
+    <div class="col-xs-3 text-left rating">
+      <h3 class="toptext"><strong>Rating 5.0</strong></h3>
+      <h3><a href="#reviews">Reviews</a></h3>
+    </div>
+
+    <div class="col-xs-3 minisummary">
+      <h3 class="toptext"><strong>About Me</strong></h3>
+      <p>I am an experienced photographer based in London.  I cater for all styles of photography... </p>
+      <a class="btn btn-primary btn-sm" href="registerprofessional.html">Contact Artist</a>
+    </div>
+
+    </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-9">
+
+      <ul class="nav nav-tabs text-center">
+      <li class="active"><a data-toggle="tab" href="#images"><p>9</p>Images</a></li>
+      <li><a data-toggle="tab" href="#unedited"><p>9</p>Unedited Images</a></li>
+      <li><a data-toggle="tab" href="#videos"><p>0</p>Videos/Drones/VR</a></li>
+      <li><a data-toggle="tab" href="#affiliates"><p>0</p>Affiliates</a></li>
+      <li><a data-toggle="tab" href="#bookings"><p><br></p><strong>My Services</strong></a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-md-3">
+      <table class="pricing">
+        <tr>
+          <td>Hourly</td>
+          <td>£15</td>
+        </tr>
+        <tr>
+          <td>Half Day</td>
+          <td>£75</td>
+        </tr>
+        <tr>
+          <td>Daily</td>
+          <td>£150</td>
+        </tr>
+      </table>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  </div><!--summary-->
+
+  <hr>
+
+  <div class="container">
+<!--
+  <div class="row bookingsummary">
+    <div class="col-xs-9">
+
+    </div>
+    <div class="col-xs-3">
+
+      <a class="btn btn-primary btn-lg" href="registerprofessional.html">Request to Book</a>
+    </div>
+  </div><!--bookingsummary-->
+
+  <div class="tab-content">
+
+
+    <div id="images" class="tab-pane fade in active">
+  <div class="pictures">
+    <h2>Images</h2>
+
+
+    <br></br>
+  <div class="gallery">
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0121.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0121.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0167.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0167.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0177.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0177.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 1-->
+
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0248.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0248.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0253.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0253.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0724.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0724.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 2-->
+
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_0954.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_0954.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_1022.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_1022.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/final/IMG_1068.jpg' %}" data-lightbox="holiday"><img src="{% static 'img/Profile/final/IMG_1068.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 3-->
+
+  </div><!--gallery-->
+  </div><!--pictures-->
+  </div><!--images-->
+
+  <div id="unedited" class="tab-pane fade in">
+  <div class="pictures">
+    <h2>Unedited Images</h2>
+
+
+    <br></br>
+  <div class="gallery">
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0055.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0055.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0336.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0336.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0411.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0411.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 1-->
+
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0445.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0445.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0551.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0551.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0659.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0659.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 2-->
+
+    <div class="row">
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0826.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0826.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_0940.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_0940.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+      <div class="col-md-4 col-xs-4">
+        <a href="{% static 'img/Profile/unedited/IMG_1401.jpg' %}" data-lightbox="natural"><img src="{% static 'img/Profile/unedited/IMG_1401.jpg' %}" width="400px" class="img-thumbnail"/></a>
+
+      </div>
+
+
+    </div><!--row 3-->
+
+
+
+  </div><!--gallery-->
+  </div><!--pictures-->
+  </div><!--images-->
+
+
+  <div id="bookings" class="tab-pane fade in">
+  <div class="row">
+    <div class="col-md-3 text-left">
+      <h3>Book an Appointment</h3>
+    </div>
+    <div class="col-md-9 text-right">
+      Calendar here
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>0-1 hr</h3>
+      <p><i>Please read the descriptions of the services carefully...</i></p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>£15</h3>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-md bookme" href="">Book Me</a>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>1-2 hr</h3>
+      <p><i>Please read the descriptions of the services carefully...</i></p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>£30</h3>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-md bookme" href="">Book Me</a>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>2-3 hr</h3>
+      <p><i>Please read the descriptions of the services carefully...</i></p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>£45</h3>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-md bookme" href="">Book Me</a>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Half Day</h3>
+      <p><i>Please read the descriptions of the services carefully...</i></p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>£60</h3>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-md bookme" href="">Book Me</a>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Full Day</h3>
+      <p><i>Please read the descriptions of the services carefully...</i></p>
+    </div>
+
+    <div class="col-md-2">
+      <h3>£120</h3>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-md bookme" href="">Book Me</a>
+    </div>
+
+
+  </div>
+
+
+  </div><!--bookings-->
+
+
+
+
+
+
+  </div><!--tab content-->
+<br><br><br>
+  <div class="row">
+    <h3 id="reviews">Reviews</h3>
+    <p>No reviews to show</p>
+
+  </div>
+
+
+
+
+
+
+  </div><!--container-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jasny-bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+
+</body>
+</html>

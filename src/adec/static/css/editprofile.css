@@ -10,7 +10,52 @@ body {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: #333333 !important;
-}	
+}
+
+#loginbar {
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+}
+
+a.toplink:link {
+    color: #FFFFFF !important;
+}
+
+a.toplink:visited {
+    color: #FFFFFF;
+}
+
+a.toplink:hover {
+    text-decoration: none;
+}
+
+a.tabs:link {
+	color: #000000;
+}
+
+a.tabs:visited {
+	color: #000000;
+}
+
+a.tabs:hover {
+	text-decoration: none;
+}
+
+#title {
+	padding-left: 20%;
+	font-size: 2em;
+}
+
+.profile:link {
+    border: 1px solid #000000;
+    padding: 2px;
+}
+
+#profile {
+    padding-top: 10px;
+    padding-right: 20%;
+}
 
 .navbar {
 	padding-left: 100px !important;
@@ -42,3 +87,7 @@ body {
 	font-size: 1.5em;
 }
 
+#profile {
+    text-position: right;
+    padding-right: 10px;
+}

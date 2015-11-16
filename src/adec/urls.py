@@ -5,7 +5,8 @@ from django.contrib import admin
 from adec.apps.accounts.views import CreateUserView, UserProfileView
 from adec.apps.booking.views import ProfessionalList, BusinessList, CreateAppointment, ProfessionalDetail, \
     BusinessDetail
-from adec.views import home, terms_and_conditions, how_it_works
+from adec.views import home, terms_and_conditions, how_it_works, thanks, register_user, search_results, profile, \
+    edit_profile, login, register_professional
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -17,7 +18,7 @@ urlpatterns = [
 
     url(r'^businesses/$', BusinessList.as_view(), name='business_list'),
     url(r'^businesses/(?P<slug>.+)/$', BusinessDetail.as_view(), name='business_detail'),
-    url(r'^professionals/$', ProfessionalList.as_view(), name='professional_list'),
+    url(r'^professionals/$', register_professional, name='professional_list'),
     url(r'^professionals/(?P<slug>.+)/appointment/$', CreateAppointment.as_view(), name='create_appointment'),
     url(r'^professionals/(?P<slug>.+)/$', ProfessionalDetail.as_view(), name='professional_detail'),
 
@@ -25,6 +26,13 @@ urlpatterns = [
     url(r'^how-it-works/$', how_it_works, name='how_it_works'),
 
     url(r'^$', home, name='home'),
+
+    url(r'^thanks/$', thanks, name='thanks'),
+    url(r'^registeruser/$', register_user, name='register_user'),
+    url(r'^searchresults/$', search_results, name='search_results'),
+    url(r'^profile/$', profile, name='profile'),
+    url(r'^editprofile/$', edit_profile, name='edit_profile'),
+    url(r'^login/$', login, name='login'),
 ]
 
 if settings.DEBUG:
