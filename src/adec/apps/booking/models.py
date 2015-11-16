@@ -30,7 +30,7 @@ class Professional(models.Model):
     full_name = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)
     bio = models.TextField()
-
+    photo = models.ImageField(upload_to='professionals', null=True)
     email = models.EmailField(max_length=120, null=True, unique=True, blank=True)
     phone_number = models.CharField(max_length=120, blank=True)
     instagram = models.CharField(max_length=120, blank=True, null=True)
@@ -66,7 +66,7 @@ class Professional(models.Model):
 
 
 class Photo(models.Model):
-    professional = models.ForeignKey(Professional)
+    professional = models.ForeignKey(Professional, related_name='professional_gallery')
     photo = models.ImageField(upload_to='business/photos')
     caption = models.CharField(max_length=140)
 

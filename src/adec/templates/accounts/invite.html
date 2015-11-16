@@ -1,0 +1,25 @@
+{% extends  'layouts/base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">Complete the registration</div>
+                <form action="" method="post">
+                    <div class="panel-body">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% include "partials/form_field.html" %}
+                        {% endfor %}
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <button type="submit" class="btn btn-primary">Send Invites</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    <div class="col-md-2"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends  'layouts/base.html' %}
+{% load staticfiles %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <strong>Register new account </strong>
+        </div>
+        <div class="panel-body">
+          <p>Please complete the form and we will get back to you.</p>
+
+          <form action="" method="post">
+
+            {% csrf_token %}
+            {% for field in form %}
+              {% include "partials/form_field.html" %}
+            {% endfor %}
+
+            <button type="submit" class="btn btn-primary">Register account</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}

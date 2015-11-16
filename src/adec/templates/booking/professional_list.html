@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+  {% for professional in object_list %}
+    <div class="media">
+      <div class="media-left">
+        <a href="{% url 'professional_detail' professional.slug %}" class="thumbnail" style="width: 200px">
+          <img class="media-object" src="{{ professional.photo.url }}">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ professional.full_name }}</h4>
+      </div>
+    </div>
+  {% endfor %}
+  <nav>
+    <ul class="pager">
+      {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+      {% endif %}
+      {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}">Next</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endblock %}

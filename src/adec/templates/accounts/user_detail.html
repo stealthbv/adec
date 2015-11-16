@@ -1,0 +1,1 @@
+{% extends  'layouts/base.html' %}{% block content %}Hello @{{ user.username }}<p>Do you want to <a href="{% url 'password_change' %}">change your password?</a> </p>{% endblock %}

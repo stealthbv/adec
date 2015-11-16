@@ -43,7 +43,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'widget_tweaks',
     'storages',
+    'adec.apps.accounts',
     'adec.apps.booking',
 )
 
@@ -119,3 +121,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     location('adec/static'),
 )
+
+AUTH_USER_MODEL = 'accounts.User'

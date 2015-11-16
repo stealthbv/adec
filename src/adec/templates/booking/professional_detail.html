@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="media">
+      <div class="media-left">
+        <a href="{% url 'professional_detail' professional.slug %}" class="thumbnail" style="width: 200px">
+          <img class="media-object" src="{{ professional.photo.url }}">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ professional.full_name }}</h4>
+
+        <p>{{ professional.bio }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% load widget_tweaks %}
+
+<div class="form-group form-row {% if field.errors %}has-error{% endif %}">
+
+    {% render_field field class+="form-control" placeholder=field.label %}
+
+    {% if field.help_text %}
+    <span class="help-block">{{ field.help_text }}</span>
+    {% endif %}
+
+    {% for error in  field.errors %}
+        <p class="text-danger">{{ error }}</p>
+    {% endfor %}
+</div>
