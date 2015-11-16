@@ -42,9 +42,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'widget_tweaks',
     'storages',
+    'datetimewidget',
     'adec.apps.accounts',
     'adec.apps.booking',
 )
@@ -111,7 +112,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-
 MEDIA_ROOT = location('../public/media')
 MEDIA_URL = '/medai/'
 
@@ -123,3 +123,5 @@ STATICFILES_DIRS = (
 )
 
 AUTH_USER_MODEL = 'accounts.User'
+
+DATETIME_INPUT_FORMATS = ['dd/mm/yyyy hh:ii']

@@ -112,9 +112,7 @@ class Service(models.Model):
 class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     service = models.ForeignKey(Service)
-    start = models.TimeField()
-    end = models.TimeField()
-    date = models.DateField()
+    date = models.DateTimeField()
 
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
 
