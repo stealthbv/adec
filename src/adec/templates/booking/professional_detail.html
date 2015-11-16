@@ -12,11 +12,99 @@
         <h4 class="media-heading">{{ professional.full_name }}</h4>
 
         <p>{{ professional.bio }}</p>
+
+        <p><a href="{% url 'create_appointment' professional.slug %}" class="btn btn-primary">Book me</a></p>
       </div>
     </div>
 
     <div class="row">
+      <div class="col-sm-8">
+        <h2>Services</h2>
 
+        {% regroup professional.service_set.all by category as category_list %}
+        <table class="table table-condensed table-bordered">
+          <tbody>
+          {% for category in category_list %}
+            <tr>
+              <th colspan="4">{{ category.grouper.name }}</th>
+            </tr>
+            {% for service in category.list %}
+              <tr>
+                <td>
+                  <h3>{{ service.name }}</h3>
+
+                  <p>{{ service.description }}</p>
+                </td>
+                <td>{{ service.price }}</td>
+                <td>{{ service.minutes }}</td>
+                <td><a href="{% url 'create_appointment' professional.slug %}?service={{ service.id }}" class="btn btn-primary btn-sm">Book</a></td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-sm-4">
+        <h2>Contact details</h2>
+
+        <p><strong>Address</strong> {{ professional.business.address|linebreaks }}</p>
+
+        <p><strong>Phone number</strong> {{ professional.business.phone_number }}</p>
+
+        <h2>Business hours</h2>
+        <dl class="dl-horizontal">
+          {% if professional.monday %}
+            <dt>Monday</dt>
+            <dd>
+              {{ professional.monday.lower }}h to
+              {{ professional.monday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.tuesday %}
+            <dt>Tuesday</dt>
+            <dd>
+              {{ professional.tuesday.lower }}h to
+              {{ professional.tuesday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.wednesday %}
+            <dt>Wednesday</dt>
+            <dd>
+              {{ professional.wednesday.lower }}h to
+              {{ professional.wednesday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.thursday %}
+            <dt>Thursday</dt>
+            <dd>
+              {{ professional.thursday.lower }}h to
+              {{ professional.thursday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.friday %}
+            <dt>Friday</dt>
+            <dd>
+              {{ professional.friday.lower }}h to
+              {{ professional.friday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.saturday %}
+            <dt>Saturday</dt>
+            <dd>
+              {{ professional.saturday.lower }}h to
+              {{ professional.saturday.upper }}h
+            </dd>
+          {% endif %}
+          {% if professional.sunday %}
+            <dt>Sunday</dt>
+            <dd>
+              {{ professional.sunday.lower }}h to
+              {{ professional.sunday.upper }}h
+            </dd>
+          {% endif %}
+        </dl>
+      </div>
     </div>
   </div>
 {% endblock %}

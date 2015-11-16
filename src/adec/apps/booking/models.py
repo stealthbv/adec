@@ -102,6 +102,9 @@ class Service(models.Model):
 
     description = models.TextField(blank=True, null=True)
 
+    class Meta:
+        ordering = ('profesional', 'category', 'name')
+
     def __unicode__(self):
         return u'%s %s' % (self.profesional, self.name)
 
