@@ -1,9 +1,7 @@
 from setuptools import setup, find_packages
-
 from pip.req import parse_requirements
 
 install_requires = [str(line.req) for line in parse_requirements(filename='requirements.txt', session=False)]
-
 
 setup(
     name='adec-app',
