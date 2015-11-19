@@ -19,6 +19,18 @@ body {
 	margin-right: 30px;
 }
 
+a.homelink:link {
+    color: #000000; !important;
+}
+
+a.homelink:visited {
+    color: #000000;
+}
+
+a.homelink:hover {
+    text-decoration: none;
+}
+
 .form {
 	width:300px;
 	margin:0 auto !important;

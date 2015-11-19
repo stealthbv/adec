@@ -18,10 +18,6 @@ def terms_and_conditions(request):
     return render(request, "termsandconditions.html")
 
 
-def how_it_works(request):
-    return render(request, "howitworks.html")
-
-
 def thanks(request):
     return render(request, "thanks.html")
 
@@ -40,3 +36,7 @@ def edit_profile(request):
 
 def login(request):
     return render(request, "login.html")
+
+
+def how_it_works(request):
+    return render(request, "howitworks.html")

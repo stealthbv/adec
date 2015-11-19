@@ -1,0 +1,42 @@
+body {
+		color: black;
+		margin: 0;
+	}
+
+
+header {
+	padding-top: 10px;
+	background-color: black;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+#loginbar {
+	font-size: 1.15em;
+	font-weight: bold;
+}
+
+#login {
+	margin-right: 10px;
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#title {
+	font-size: 2em;
+}
+
+.forartists:link {
+
+	padding: 2px;
+}
