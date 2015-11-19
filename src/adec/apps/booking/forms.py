@@ -1,11 +1,23 @@
 from django import forms
-from .models import Professional, Booking, Service
+from django.utils.timezone import now
+
+from .models import Booking
+from datetimewidget.widgets import DateTimeWidget
 
 
 class BookingForm(forms.ModelForm):
+    date = forms.DateTimeField(
+        initial=now(),
+        widget=DateTimeWidget(
+            usel10n=True,
+            options={
+                'autoclose': True
+            })
+    )
+
     class Meta:
         model = Booking
-        fields = ('start', 'end', 'date')
+        fields = ('date',)
 
     def __init__(self, professional, service, user, *args, **kwargs):
         self.professional = professional
@@ -19,7 +31,7 @@ class BookingForm(forms.ModelForm):
         booking.service = self.service
         booking.user = self.user
 
-        if self.commit:
+        if commit:
             booking.save()
 
         return booking

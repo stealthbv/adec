@@ -10,3 +10,4 @@ django-widget-tweaks==1.4.1
 docutils==0.12
 gunicorn==19.3.0
 psycopg2==2.6.1
+django-datetime-widget==0.9.3
